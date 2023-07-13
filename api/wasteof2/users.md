@@ -22,6 +22,38 @@
 	returns the profile of a user.
 	-----------
 	```
+ 	sample responses:
+  	- `GET /users/jeffalo`
+  		```
+		{
+		  "name": "jeffalo",
+		  "id": "60c4976b59c722b5661559c4",
+		  "bio": "creator of wasteof.money (very cool) (my real name isn't actually jeffalo)",
+		  "verified": true,
+		  "permissions": {
+		    "admin": true,
+		    "banned": false
+		  },
+		  "beta": true,
+		  "color": "yellow",
+		  "links": [],
+		  "history": {
+		    "joined": 1623496555000
+		  },
+		  "stats": {
+		    "followers": 702,
+		    "following": 92,
+		    "posts": 381
+		  },
+		  "online": true
+		}
+   		```
+  	- `GET /users/userthatdoesnotexist`
+  		```
+		{
+		  "error": "no user found"
+		}
+   		```
 
 - `/users/:username/followers`
 	```
